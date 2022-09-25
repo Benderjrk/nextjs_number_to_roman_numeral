@@ -41,16 +41,16 @@ const Home: NextPage = () => {
       </Head>
 
       <main className="bg-marble mx-auto flex flex-col items-center justify-center min-h-screen p-4">
-        <h1 className="text-5xl md:text-[5rem] leading-normal font-extrabold text-gray-700">
+        <h1 className="text-5xl font-serif md:text-[5rem] leading-normal font-extrabold text-zinc-200">
           Turn a <span className="bg-clip-text text-transparent bg-gradient-to-b from-yellow-400 to-yellow-300 hover:motion-safe:animate-pulse">Number</span> into a <span className="bg-clip-text text-transparent bg-gradient-to-t from-yellow-400 to-yellow-300 hover:motion-safe:animate-pulse">Roman Numeral</span>
         </h1>
         <div className="flex flex-col mt-2 pt-2">
         {command && 
-          <p className="text-5xl md:text-[5rem] font-extrabold text-gray-500 text-center break-all">
+          <p className="text-5xl font-serif md:text-[5rem] font-extrabold text-gray-200 text-center break-all select-all">
             {command}
           </p>
         }
-          <form onSubmit={handleSubmit}>
+          <form className={"my-2"} onSubmit={handleSubmit}>
             <label htmlFor="terminal" hidden>
               Number to Numeral
             </label>
@@ -59,7 +59,7 @@ const Home: NextPage = () => {
               id="terminal"
               name="terminal"
               placeholder="Enter a number"
-              className="bg-zinc-200 text-zinc-800 min-w-[100%] focus:outline-yellow-500 p-3 text-center"
+              className="bg-zinc-800 text-zinc-200 min-w-[100%] focus:outline-yellow-500 p-3 text-center rounded-xl"
               required
               autoComplete="off"
               maxLength={50}
@@ -68,7 +68,7 @@ const Home: NextPage = () => {
               className={
                 "group rounded-xl outline-none text-white disabled:opacity-40 ml-3 mt-5 bg-indigo-800"
               }>
-            <button className="min-w-[100%] px-3 mx-auto mb-1 mr-[0.8px] ml-[0.8px] text-xl tracking-tight uppercase text-center italic rounded-xl border-2 font-normal py-3 flex flex-row items-center justify-center border-yellow-700 hover:border-yellow-600 bg-yellow-500 hover:shadow-inner hover:shadow-4xl hover:shadow-zinc-800/80" type="submit">
+            <button className="font-serif min-w-[100%] px-3 mx-auto mb-1 mr-[0.8px] ml-[0.8px] text-xl tracking-normal uppercase text-center rounded-xl border-2 font-normal py-3 flex flex-row items-center justify-center border-yellow-500 hover:border-yellow-600 bg-yellow-500 hover:shadow-inner hover:shadow-4xl hover:shadow-zinc-800/80" type="submit">
               Convert
             </button>
             </span>
